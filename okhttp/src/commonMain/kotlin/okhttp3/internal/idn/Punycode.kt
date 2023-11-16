@@ -31,7 +31,7 @@ import okio.ByteString.Companion.encodeUtf8
  * [RFC 3492]: https://datatracker.ietf.org/doc/html/rfc3492
  */
 object Punycode {
-  val PREFIX_STRING = "xn--"
+  const PREFIX_STRING = "xn--"
   val PREFIX = PREFIX_STRING.encodeUtf8()
 
   private const val base = 36
