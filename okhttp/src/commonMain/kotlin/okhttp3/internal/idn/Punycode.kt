@@ -32,6 +32,7 @@ import okio.ByteString.Companion.encodeUtf8
  */
 object Punycode {
   const PREFIX_STRING = "xn--"
+  val PREFIX_STRING1 = "xn--"
   val PREFIX = PREFIX_STRING.encodeUtf8()
 
   private const val base = 36
