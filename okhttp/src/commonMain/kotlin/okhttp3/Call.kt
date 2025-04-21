@@ -1,11 +1,7 @@
 fun main() {
-    val number: Any = 10
-    when (number) {
-        is Int -> if (number > 5) {
-            println("Number is an integer greater than 5")
-        } else {
-            println("Number is an integer but not greater than 5")
-        }
-        else -> println("Number is not an integer")
+    val numbers = listOf(1, 2, 3, 4, 5)
+    numbers.forEach {
+        if (it % 2 == 0) continue // Now allowed
+        println(it)
     }
 }
