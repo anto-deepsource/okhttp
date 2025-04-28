@@ -20,3 +20,7 @@ fun main() {
         greet() // prints: Hello, Alice!
     }
 }
+
+fun foo(x: String & Any) {
+  
+}
