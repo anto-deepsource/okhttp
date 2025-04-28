@@ -4,4 +4,5 @@ fun main() {
         if (it % 2 == 0) continue // Now allowed
         println(it)
     }
+    for (i in 2..1) {}
 }
