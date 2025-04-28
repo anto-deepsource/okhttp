@@ -15,5 +15,17 @@ fun processList(elements: List<Int>): Boolean {
         }
         if (variable == 0) return true // If variable is zero, return true
     }
+
+    val KClass<*>.jsonSchema : String
+    get() = $$"""
+    {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "$id": "https://example.com/product.schema.json",
+      "$dynamicAnchor": "meta"
+      "title": "$${simpleName ?: qualifiedName ?: "unknown"}",
+      "type": "object"
+    }
+    """
+  
     return false
 }
