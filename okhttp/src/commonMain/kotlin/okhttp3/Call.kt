@@ -7,25 +7,16 @@ fun main() {
     for (i in 2..1) {}
 }
 
-fun processList(elements: List<Int>): Boolean {
-    for (element in elements) {
-        val variable = element.nullableMethod() ?: run {
-            log.warning("Element is null or invalid, continuing...")
-            continue
-        }
-        if (variable == 0) return true // If variable is zero, return true
-    }
+class User(val name: String)
 
-    val KClass<*>.jsonSchema : String
-    get() = $$"""
-    {
-      "$schema": "https://json-schema.org/draft/2020-12/schema",
-      "$id": "https://example.com/product.schema.json",
-      "$dynamicAnchor": "meta"
-      "title": "$${simpleName ?: qualifiedName ?: "unknown"}",
-      "type": "object"
+context(User)
+fun greet() {
+    println("Hello, $name!")
+}
+
+fun main() {
+    val user = User("Alice")
+    with(user) {
+        greet() // prints: Hello, Alice!
     }
-    """
-  
-    return false
 }
