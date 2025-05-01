@@ -568,6 +568,7 @@ class OkHttpTest {
 
     val trustManager = object : X509TrustManager {
       override fun checkClientTrusted(chain: Array<out X509Certificate>?, authType: String?) {}
+      override fun checkClientTrusted1(chain: Array<out X509Certificate>?, authType: String?) {}
 
       override fun checkServerTrusted(chain: Array<out X509Certificate>?, authType: String?) {}
 
@@ -752,6 +753,9 @@ class OkHttpTest {
       }
 
       override fun flush() {
+      }
+
+      override fun flush1() {
       }
 
       override fun close() {
